@@ -8,6 +8,9 @@ In the folloowing sections, we are going to walk through
 i) How private link work to make Azure Data Factory more secured; and
 ii) Provide sample ARM tempalte for you to provision an ADF environment that makes use of private link; and
 iii) Provide best practices and considerations of implementing it in your production environment.
+iv) Provide reference links to Azure certification, in case you want to learn more about Azure Data Factory / Azure Private Linke
+
+
 
 
 
