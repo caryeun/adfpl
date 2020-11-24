@@ -63,10 +63,10 @@ What's more - you don’t need to configure the preceding domain and port in a v
 ## How may I set up Private Link for Azure Data Factory, and ensure no public internet is allowed?
 
 You can configure Private Link for Azure Data Factory via the portal UI.  Below screen capture for quick reference. 
-![Azure Data Factory - Private Endpoint]https://docs.microsoft.com/en-us/azure/data-factory/media/data-factory-private-link/create-private-endpoint.png
+![Azure Data Factory - Private Endpoint](https://docs.microsoft.com/en-us/azure/data-factory/media/data-factory-private-link/create-private-endpoint.png)
 
 You can disable public network access to the data factory.  Below screen capture for quick reference.
-![Azure Data Factory - Disable public network access]https://docs.microsoft.com/en-us/azure/data-factory/media/data-factory-private-link/create-private-endpoint.png
+![Azure Data Factory - Disable public network access](https://docs.microsoft.com/en-us/azure/data-factory/media/data-factory-private-link/create-private-endpoint.png)
 
 
 If you would like to test it out in your test environment, this arm tempalte will help deploy a sample setup in your subscription. (link to be provided)
