@@ -60,9 +60,16 @@ What's more - you don’t need to configure the preceding domain and port in a v
 (Note: in addition to the communication between ADF IR and ADF control plan, the above diagram also secure the connections between ADF IR and Azure Storage Account)
 
 
-## How may I test it out?
+## How may I set up Private Link for Azure Data Factory, and ensure no public internet is allowed?
 
-You can deploy the arm template here.  (link to be provided)
+You can configure Private Link for Azure Data Factory via the portal UI.  Below screen capture for quick reference. 
+![Azure Data Factory - Private Endpoint]https://docs.microsoft.com/en-us/azure/data-factory/media/data-factory-private-link/create-private-endpoint.png
+
+You can disable public network access to the data factory.  Below screen capture for quick reference.
+![Azure Data Factory - Disable public network access]https://docs.microsoft.com/en-us/azure/data-factory/media/data-factory-private-link/create-private-endpoint.png
+
+
+If you would like to test it out in your test environment, this arm tempalte will help deploy a sample setup in your subscription. (link to be provided)
 
 
 ## I am interested to know more.  Where may I get more info?
