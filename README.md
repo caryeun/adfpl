@@ -10,12 +10,26 @@ ii) Provide sample ARM tempalte for you to provision an ADF environment that mak
 iii) Provide reference links to Azure certification, in case you want to learn more about Azure Data Factory / Azure Private Linke
 
 ## What is Azure Private Link?
+Azure Private Link enables you to access Azure PaaS Services (for example, Azure Storage and SQL Database) and Azure hosted customer-owned/partner services over a private endpoint in your virtual network.
+Traffic between your virtual network and the service travels the Microsoft backbone network. Exposing your service to the public internet is no longer necessary.
+
+Refer to below link for more details
+ What is Azure Private Link?
+ https://docs.microsoft.com/en-us/azure/private-link/private-link-overview
 
 
 ## What is Azure Data Factory?
+Azure Data Factory is the cloud-based ETL and data integration service that allows you to create data-driven workflows for orchestrating data movement and transforming data at scale. Using Azure Data Factory, you can create and schedule data-driven workflows (called pipelines) that can ingest data from disparate data stores. You can build complex ETL processes that transform data visually with data flows or by using compute services such as Azure HDInsight Hadoop, Azure Databricks, and Azure SQL Database.
+
+Azure Data Factory consists of 2 planes: the "control plane" and "data plane".
+
+The "control plane" store metadata such as pipeline definition and schedule, and provides Data Factory pipelines authoring and monitoring.  
+
+The "data plane" is a compute infrastructure called Integration Runtime (IR) to provide data integration capabilities.   It connects to "linked service", which are data stores or compute services, to perform "activities", which can be copying data between data stores, running Data Flows, or dispatching transform activities to other Azure services such as HDInsight, Databricks and Azure Machine Learning. 
 
 
 ## How does Private Link makes Data Factory more secure?
+
 
 
 
@@ -24,4 +38,6 @@ iii) Provide reference links to Azure certification, in case you want to learn m
 
 ## I am interested to know more.  Where may I find more information?
 
+
+ 
 
