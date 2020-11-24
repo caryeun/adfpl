@@ -27,6 +27,9 @@ The "control plane" store metadata such as pipeline definition and schedule, and
 
 The "data plane" is a compute infrastructure called Integration Runtime (IR) to provide data integration capabilities.   It connects to "linked service", which are data stores or compute services, to perform "activities", which can be copying data between data stores, running Data Flows, or dispatching transform activities to other Azure services such as HDInsight, Databricks and Azure Machine Learning. 
 
+The below logical diagram illustrates the various components for an Azure Data Factory pipeline.  
+![Azure Data Factory - logical diagram](https://github.com/caryeun/adfpl/blob/main/media/ADF_Overview.png)
+
 
 ## How does Private Link makes Data Factory more secure?
 
