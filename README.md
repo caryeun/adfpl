@@ -48,6 +48,7 @@ In addition, you will have to open several communication channels between the Az
 - \*.servicebus.windows.net, port 443; and
 - download.microsoft.com
 
+All of these adding up together are adding up unnessary risk exposure for Azure Data Factory.
 
 ### Network diagram - after  Private Link for ADF is implemented
 After private link is introduced, you can secure communication between ADF IR and ADF control plane using private link.  The below diagram illustrates how it works.  
