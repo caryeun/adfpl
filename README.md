@@ -55,6 +55,8 @@ After private link is introduced, you can secure communication between ADF IR an
 
 ![Azure Data Factory - network diagram - with private link](https://github.com/caryeun/adfpl/blob/main/media/ADF_PostPrivateLink.png)
 
+What's more - you don’t need to configure the preceding domain and port in a virtual network - which further reduced your risk exposure.
+
 (Note: in addition to the communication between ADF IR and ADF control plan, the above diagram also secure the connections between ADF IR and Azure Storage Account)
 
 
