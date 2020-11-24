@@ -1,4 +1,4 @@
-# How to eliminiate Azure Data Factory's public internet exposure using private link
+# How to eliminate Azure Data Factory's public internet exposure using private link
 
 Azure Private Link was made generally available on Feb 2020.  Since then, it made numerous Azure PaaS services more secured.  By eliminating data transfer via the public internet, Azure Private Link help reduce the exposure to cyber security attacks significantly.
 
