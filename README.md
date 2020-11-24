@@ -13,7 +13,7 @@ iii) Provide reference links to Azure certification, in case you want to learn m
 Azure Private Link enables you to access Azure PaaS Services (for example, Azure Storage and SQL Database) and Azure hosted customer-owned/partner services over a private endpoint in your virtual network.
 Traffic between your virtual network and the service travels the Microsoft backbone network. Exposing your service to the public internet is no longer necessary.
 
-Refer to below link for more details
+Refer to below link for more details about Private Link:
  What is Azure Private Link?
  https://docs.microsoft.com/en-us/azure/private-link/private-link-overview
 
@@ -30,17 +30,43 @@ The "data plane" is a compute infrastructure called Integration Runtime (IR) to 
 The below logical diagram illustrates the various components for an Azure Data Factory pipeline.  
 ![Azure Data Factory - logical diagram](https://github.com/caryeun/adfpl/blob/main/media/ADF_Overview.png)
 
+Refer to below link for more details Azure Data Factory:
+ What is Azure Data Factory
+ https://docs.microsoft.com/en-us/azure/data-factory/introduction
+
 
 ## How does Private Link makes Data Factory more secure?
 
+Before private link is available, the connection between ADF IR and ADF control plane is via public internet, as shown below.
 
+![Azure Data Factory - network diagram - without private link](https://github.com/caryeun/adfpl/blob/main/media/ADF_BeforePrivateLink.png)
+
+After private linke is introduced, you can secure communication between ADF IR and ADF control plane using private link.  The below diagram illustrates how it works.  
+
+![Azure Data Factory - network diagram - with private link](https://github.com/caryeun/adfpl/blob/main/media/ADF_PostPrivateLink.png)
+
+(Note: in addition to the communication between ADF IR and ADF control plan, the above diagram also secure the connections between ADF IR and Azure Storage Account)
 
 
 ## How may I test it out?
 
+You can deploy the arm template here.  (link to be provided)
 
-## I am interested to know more.  Where may I find more information?
 
+## I am interested to know more.  Where may I get more info?
 
+Azure Data Factory is just 1 of the data services offered on Azure. To learn more about the management, monitoring, security and prviacy of data on Azure, the below learning path for "Azure Data Engineer Associate" shall help.
+ Microsoft Certified: Azure Data Engineer Associate
+ - https://docs.microsoft.com/en-us/learn/certifications/azure-data-engineer
+
+Private link is among 1 of the security features offered by Azure.  To learn more about the other security features, the below learning path for "Azure Security Engineer Associate" shall give you a more comprehensive overview on Azure Security. 
+ Microsoft Certified: Azure Security Engineer Associate
+ - https://docs.microsoft.com/en-us/learn/certifications/azure-security-engineer
  
+If you are looking for information for security consideration of implementing just Data Factory, refer to the link below:
+ Security considerations for data movement in Azure Data Factory
+ - https://docs.microsoft.com/en-us/azure/data-factory/data-movement-security-considerations
+ 
+Hope you find this blog post useful!
+
 
