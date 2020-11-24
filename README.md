@@ -37,11 +37,20 @@ Refer to below link for more details Azure Data Factory:
 
 ## How does Private Link makes Data Factory more secure?
 
-Before private link is available, the connection between ADF IR and ADF control plane is via public internet, as shown below.
+### Network diagram - before Private Link for ADF is implemented
+Before private link is available, the communication between ADF IR and ADF control plane will have to traverse the public internet, as shown below.
 
 ![Azure Data Factory - network diagram - without private link](https://github.com/caryeun/adfpl/blob/main/media/ADF_BeforePrivateLink.png)
 
-After private linke is introduced, you can secure communication between ADF IR and ADF control plane using private link.  The below diagram illustrates how it works.  
+In addition, you will have to open several communication channels between the Azure Data Factory and the virtual network:
+- adf.azure.com, port 443; and
+- \*.{region}.datafactory.azure.net, port 443; and
+- \*.servicebus.windows.net, port 443; and
+- download.microsoft.com
+
+
+### Network diagram - after  Private Link for ADF is implemented
+After private link is introduced, you can secure communication between ADF IR and ADF control plane using private link.  The below diagram illustrates how it works.  
 
 ![Azure Data Factory - network diagram - with private link](https://github.com/caryeun/adfpl/blob/main/media/ADF_PostPrivateLink.png)
 
