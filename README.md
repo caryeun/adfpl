@@ -14,8 +14,7 @@ Azure Private Link enables you to access Azure PaaS Services (for example, Azure
 Traffic between your virtual network and the service travels the Microsoft backbone network. Exposing your service to the public internet is no longer necessary.
 
 Refer to below link for more details about Private Link:
- What is Azure Private Link?
- https://docs.microsoft.com/en-us/azure/private-link/private-link-overview
+* What is Azure Private Link? https://docs.microsoft.com/en-us/azure/private-link/private-link-overview
 
 
 ## What is Azure Data Factory?
@@ -24,15 +23,14 @@ Azure Data Factory is the cloud-based ETL and data integration service that allo
 Azure Data Factory consists of 2 planes: the "control plane" and "data plane".
 
 * The "control plane" stores metadata such as pipeline definition and schedule, and provides Data Factory pipelines authoring and monitoring capabilities.  
-* The "data plane" is a compute infrastructure called Integration Runtime (IR) to provide data integration capabilities.   It connects to "linked service", which are data stores or compute services, to perform "activities", which can be copying data between data stores, running Data Flows, or dispatching transform activities to other Azure services such as HDInsight, Databricks and Azure Machine Learning. There are 3 types of integration runtimes: Azure, Self-hosted and Azure-SSIS.  As of the time of the writing, only private linke for self-hosted integration runtime is generally available. This blog will use self-hosted integration runtime for illustration.  
+* The "data plane" is a compute infrastructure called Integration Runtime (IR) to provide data integration capabilities.   It connects to "linked service", which are data stores or compute services, to perform "activities", which can be copying data between data stores, running Data Flows, or dispatching transform activities to other Azure services such as HDInsight, Databricks and Azure Machine Learning. There are 3 types of integration runtimes: Azure, Self-hosted and Azure-SSIS.  As of the time of the writing, only private link for self-hosted integration runtime is generally available. This blog will use self-hosted integration runtime for illustration.  
 
 
 The below logical diagram illustrates the various components for an Azure Data Factory pipeline.  
 ![Azure Data Factory - logical diagram](media/ADF_Overview.png)
 
 Refer to below link for more details Azure Data Factory:
- What is Azure Data Factory
- https://docs.microsoft.com/en-us/azure/data-factory/introduction
+* What is Azure Data Factory https://docs.microsoft.com/en-us/azure/data-factory/introduction
 
 
 ## How does Private Link makes Data Factory more secure?
@@ -41,7 +39,7 @@ To illustrate the idea, we will look at a simplified data factory infrastructure
 1. 1 instance of data factory, that stores metadata of the pipeline; and 
 2. 1 storage account that represents the "source" linked service; and
 3. 1 storage account that represents the "destination linked service", and 
-4. 1 integration runtime that perform the actual data movement from "source" to "destination".  
+4. 1 integration runtime that performs the actual data movement from "source" to "destination".  
 
 ### Network diagram - before Private Link for ADF is implemented
 ![Azure Data Factory - network diagram - without private link](media/ADF_BeforePrivateLink.png)
