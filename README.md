@@ -37,10 +37,16 @@ Refer to below link for more details Azure Data Factory:
 
 ## How does Private Link makes Data Factory more secure?
 
-### Network diagram - before Private Link for ADF is implemented
-Before private link is available, the communication between ADF IR and ADF control plane will have to traverse the public internet, as shown below.
+To illustrate the idea, we will look at a simplified data factory infrastructure setup below, where there is:
+1. 1 instance of data factory, that stores metadata of the pipeline; and 
+2. 1 storage account that represents the "source" linked service; and
+3. 1 storage account that represents the "destination linked service", and 
+4. 1 integration runtime that perform the actual data movement from "source" to "destination".  
 
+### Network diagram - before Private Link for ADF is implemented
 ![Azure Data Factory - network diagram - without private link](media/ADF_BeforePrivateLink.png)
+
+Before private link is available, the communication between ADF IR and ADF control plane will have to traverse the public internet. 
 
 In addition, you will have to open several communication channels between the Azure Data Factory and the virtual network:
 - adf.azure.com, port 443; and
