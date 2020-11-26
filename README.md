@@ -23,7 +23,7 @@ Azure Data Factory is the cloud-based ETL and data integration service that allo
 
 Azure Data Factory consists of 2 planes: the "control plane" and "data plane".
 
-The "control plane" store metadata such as pipeline definition and schedule, and provides Data Factory pipelines authoring and monitoring.  
+The "control plane" stores metadata such as pipeline definition and schedule, and provides Data Factory pipelines authoring and monitoring capabilities.  
 
 The "data plane" is a compute infrastructure called Integration Runtime (IR) to provide data integration capabilities.   It connects to "linked service", which are data stores or compute services, to perform "activities", which can be copying data between data stores, running Data Flows, or dispatching transform activities to other Azure services such as HDInsight, Databricks and Azure Machine Learning. 
 
@@ -50,14 +50,22 @@ In addition, you will have to open several communication channels between the Az
 
 All of these adding up together are adding up unnessary risk exposure for Azure Data Factory.
 
+
+I have exported the ARM templates for the above setup to the GitHub link here.  https://github.com/caryeun/adfpl/blob/main/armtemplates/beforePrivateLink
+In total there are 9 resources for the setup, as shown in the screen catpure below.
+![Resource list - before adding private link](https://github.com/caryeun/adfpl/blob/main/media/ADF_BeforePrivateLink.png)
+
 ### Network diagram - after  Private Link for ADF is implemented
 After private link is introduced, you can secure communication between ADF IR and ADF control plane using private link.  The below diagram illustrates how it works.  
 
-![Azure Data Factory - network diagram - with private link](https://github.com/caryeun/adfpl/blob/main/media/ADF_PostPrivateLink.png)
+![Azure Data Factory - network diagram - with private link](https://github.com/caryeun/adfpl/blob/main/media/beforePrivateLink_resourceList.png)
 
 What's more - you don’t need to configure the preceding domain and port in a virtual network - which further reduced your risk exposure.
 
-(Note: in addition to the communication between ADF IR and ADF control plan, the above diagram also secure the connections between ADF IR and Azure Storage Account)
+
+I have exported the ARM templates for the above setup to the GitHub link here.  https://github.com/caryeun/adfpl/blob/main/armtemplates/postPrivateLink
+You should notice that there are 3 additional resources created for the private link to work. 
+![Resource list - after adding private link](https://github.com/caryeun/adfpl/blob/main/media/postPrivateLink_resourceList.png)
 
 
 ## How may I set up Private Link for Azure Data Factory, and ensure no public internet is allowed?
@@ -69,7 +77,12 @@ You can disable public network access to the data factory.  Below screen capture
 ![Azure Data Factory - Disable public network access](https://docs.microsoft.com/en-us/azure/data-factory/media/data-factory-private-link/create-private-endpoint.png)
 
 
-If you would like to test it out in your test environment, this arm tempalte will help deploy a sample setup in your subscription. (link to be provided)
+## How to tell if my self-hosted integration runtime is connecting to the private endpoint?
+You can verify by checking the DNS resolution of the service endpoint hostname on the integration runtime.  You can get the hostname from the authentication key string in the Azure Data Factory portal, as shown below.
+![Azure Data Factory - Integration runtime Authentication Key](https://github.com/caryeun/adfpl/blob/main/media/adfPrivateLinkeServiceEndPoint.png)
+
+If private endpoint is setup, then the DNS resolution on your self hosted integration runtime should show an internal IP address. In the example below, it resolves to 192.168.168.5 which is the intranet address assigned by internal DNS. 
+![Azure Data Factory - DNS resolution](https://github.com/caryeun/adfpl/blob/main/media/adfPrivateLinkeServiceEndPoint_resolveToInternalIp.png)
 
 
 ## I am interested to know more.  Where may I get more info?
@@ -85,7 +98,9 @@ Private link is among 1 of the security features offered by Azure.  To learn mor
 If you are looking for information for security consideration of implementing just Data Factory, refer to the link below:
  Security considerations for data movement in Azure Data Factory
  - https://docs.microsoft.com/en-us/azure/data-factory/data-movement-security-considerations
- 
+
+And finally, the examples given in this blog can be found in the GitHub repo here.  https://github.com/caryeun/adfpl
+
 Hope you find this blog post useful!
 
 
