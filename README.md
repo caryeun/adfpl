@@ -90,16 +90,13 @@ If private endpoint is setup, then the DNS resolution on your self hosted integr
 ## I am interested to know more.  Where may I get more info?
 
 Azure Data Factory is just 1 of the data services offered on Azure. To learn more about the management, monitoring, security and prviacy of data on Azure, the below learning path for "Azure Data Engineer Associate" shall help.
- Microsoft Certified: Azure Data Engineer Associate
- - https://docs.microsoft.com/en-us/learn/certifications/azure-data-engineer
+* Microsoft Certified: Azure Data Engineer Associate https://docs.microsoft.com/en-us/learn/certifications/azure-data-engineer
 
 Private link is among 1 of the security features offered by Azure.  To learn more about the other security features, the below learning path for "Azure Security Engineer Associate" shall give you a more comprehensive overview on Azure Security. 
- Microsoft Certified: Azure Security Engineer Associate
- - https://docs.microsoft.com/en-us/learn/certifications/azure-security-engineer
+* Microsoft Certified: Azure Security Engineer Associate https://docs.microsoft.com/en-us/learn/certifications/azure-security-engineer
  
 If you are looking for information for security consideration of implementing just Data Factory, refer to the link below:
- Security considerations for data movement in Azure Data Factory
- - https://docs.microsoft.com/en-us/azure/data-factory/data-movement-security-considerations
+* Security considerations for data movement in Azure Data Factory https://docs.microsoft.com/en-us/azure/data-factory/data-movement-security-considerations
 
 And finally, the examples given in this blog can be found in the GitHub repo here.  https://github.com/caryeun/adfpl
 
