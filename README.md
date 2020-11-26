@@ -47,11 +47,11 @@ To illustrate the idea, we will look at a simplified data factory infrastructure
 Before private link is available, 
 * the communication between ADF IR and ADF control plane will have to traverse the public internet. 
 
-* in addition, -	the following communication channels between the Azure Data Factory and the virtual network will have to be opened up:
- - adf.azure.com, port 443; and
- - \*.{region}.datafactory.azure.net, port 443; and
- - \*.servicebus.windows.net, port 443; and
- - download.microsoft.com
+* in addition, the following communication channels between the Azure Data Factory and the virtual network will have to be opened up:
+  * adf.azure.com, port 443; and
+  * \*.{region}.datafactory.azure.net, port 443; and
+  * \*.servicebus.windows.net, port 443; and
+  * download.microsoft.com
 
 All of these together added unnecessary risk exposure for Azure Data Factory.
 
