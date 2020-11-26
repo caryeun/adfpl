@@ -78,7 +78,7 @@ You can configure Private Link for Azure Data Factory via the portal UI.  Below 
 ![Azure Data Factory - Private Endpoint](https://docs.microsoft.com/en-us/azure/data-factory/media/data-factory-private-link/create-private-endpoint.png)
 
 You can disable public network access to the data factory.  Below screen capture for quick reference.
-![Azure Data Factory - Disable public network access](https://docs.microsoft.com/en-us/azure/data-factory/media/data-factory-private-link/create-private-endpoint.png)
+![Azure Data Factory - Disable public network access](https://docs.microsoft.com/en-us/azure/data-factory/media/data-factory-private-link/disable-network-access.png)
 
 
 ## How to tell if my self-hosted integration runtime is connecting to the private endpoint?
