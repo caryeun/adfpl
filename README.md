@@ -6,7 +6,7 @@ Of most PaaS Services, Azure Data Factory is considered to be 1 of the most impo
 
 In the following sections, we are going to walk through
 1. How private link work to make Azure Data Factory more secured; and
-2. Provide sample ARM tempalte for you to provision an ADF environment that makes use of private link; and
+2. Provide sample ARM template for you to provision an ADF environment that makes use of private link; and
 3. Provide reference links to Azure certification, in case you want to learn more about Azure Data Factory / Azure Private Link
 
 ## What is Azure Private Link?
