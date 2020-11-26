@@ -53,12 +53,12 @@ All of these adding up together are adding up unnessary risk exposure for Azure 
 
 I have exported the ARM templates for the above setup to the GitHub link here.  https://github.com/caryeun/adfpl/blob/main/armtemplates/beforePrivateLink
 In total there are 9 resources for the setup, as shown in the screen catpure below.
-![Resource list - before adding private link](https://github.com/caryeun/adfpl/blob/main/media/ADF_BeforePrivateLink.png)
+![Resource list - before adding private link](https://github.com/caryeun/adfpl/blob/main/media/beforePrivateLink_resourceList.png)
 
 ### Network diagram - after  Private Link for ADF is implemented
 After private link is introduced, you can secure communication between ADF IR and ADF control plane using private link.  The below diagram illustrates how it works.  
 
-![Azure Data Factory - network diagram - with private link](https://github.com/caryeun/adfpl/blob/main/media/beforePrivateLink_resourceList.png)
+![Azure Data Factory - network diagram - with private link](https://github.com/caryeun/adfpl/blob/main/media/ADF_PostPrivateLink.png)
 
 What's more - you don’t need to configure the preceding domain and port in a virtual network - which further reduced your risk exposure.
 
