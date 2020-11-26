@@ -65,7 +65,7 @@ What's more - you don’t need to configure the preceding domain and port in a v
 
 I have exported the ARM templates for the above setup to the GitHub link here.  https://github.com/caryeun/adfpl/blob/main/armtemplates/postPrivateLink
 You should notice that there are 3 additional resources created for the private link to work. 
-![Resource list - after adding private link](https://github.com/caryeun/adfpl/blob/main/media/postPrivateLink_resourceList.png)
+![Resource list - after adding private link](media/postPrivateLink_resourceList.PNG)
 
 
 ## How may I set up Private Link for Azure Data Factory, and ensure no public internet is allowed?
