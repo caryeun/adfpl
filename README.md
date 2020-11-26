@@ -77,10 +77,10 @@ You can disable public network access to the data factory.  Below screen capture
 
 ## How to tell if my self-hosted integration runtime is connecting to the private endpoint?
 You can verify by checking the DNS resolution of the service endpoint hostname on the integration runtime.  You can get the hostname from the authentication key string in the Azure Data Factory portal, as shown below.
-![Azure Data Factory - Integration runtime Authentication Key](media/adfPrivateLinkeServiceEndPoint.png)
+![Azure Data Factory - Integration runtime Authentication Key](media/adfPrivateLinkeServiceEndPoint.PNG)
 
 If private endpoint is setup, then the DNS resolution on your self hosted integration runtime should show an internal IP address. In the example below, it resolves to 192.168.168.5 which is the intranet address assigned by internal DNS. 
-![Azure Data Factory - DNS resolution](media/adfPrivateLinkeServiceEndPoint_resolveToInternalIp.png)
+![Azure Data Factory - DNS resolution](media/adfPrivateLinkeServiceEndPoint_resolveToInternalIp.PNG)
 
 
 ## I am interested to know more.  Where may I get more info?
@@ -100,5 +100,3 @@ If you are looking for information for security consideration of implementing ju
 And finally, the examples given in this blog can be found in the GitHub repo here.  https://github.com/caryeun/adfpl
 
 Hope you find this blog post useful!
-
-
