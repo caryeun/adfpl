@@ -28,7 +28,7 @@ The "control plane" stores metadata such as pipeline definition and schedule, an
 The "data plane" is a compute infrastructure called Integration Runtime (IR) to provide data integration capabilities.   It connects to "linked service", which are data stores or compute services, to perform "activities", which can be copying data between data stores, running Data Flows, or dispatching transform activities to other Azure services such as HDInsight, Databricks and Azure Machine Learning. 
 
 The below logical diagram illustrates the various components for an Azure Data Factory pipeline.  
-![Azure Data Factory - logical diagram](https://github.com/caryeun/adfpl/blob/main/media/ADF_Overview.png)
+![Azure Data Factory - logical diagram](media/ADF_Overview.png)
 
 Refer to below link for more details Azure Data Factory:
  What is Azure Data Factory
@@ -40,7 +40,7 @@ Refer to below link for more details Azure Data Factory:
 ### Network diagram - before Private Link for ADF is implemented
 Before private link is available, the communication between ADF IR and ADF control plane will have to traverse the public internet, as shown below.
 
-![Azure Data Factory - network diagram - without private link](https://github.com/caryeun/adfpl/blob/main/media/ADF_BeforePrivateLink.png)
+![Azure Data Factory - network diagram - without private link](media/ADF_BeforePrivateLink.png)
 
 In addition, you will have to open several communication channels between the Azure Data Factory and the virtual network:
 - adf.azure.com, port 443; and
@@ -51,19 +51,19 @@ In addition, you will have to open several communication channels between the Az
 All of these adding up together are adding up unnessary risk exposure for Azure Data Factory.
 
 
-I have exported the ARM templates for the above setup to the GitHub link here.  https://github.com/caryeun/adfpl/blob/main/armtemplates/beforePrivateLink
+I have exported the ARM templates for the above setup to the GitHub link here.  armtemplates/beforePrivateLink
 In total there are 9 resources for the setup, as shown in the screen catpure below.
-![Resource list - before adding private link](https://github.com/caryeun/adfpl/blob/main/media/beforePrivateLink_resourceList.png)
+![Resource list - before adding private link](media/beforePrivateLink_resourceList.png)
 
 ### Network diagram - after  Private Link for ADF is implemented
 After private link is introduced, you can secure communication between ADF IR and ADF control plane using private link.  The below diagram illustrates how it works.  
 
-![Azure Data Factory - network diagram - with private link](https://github.com/caryeun/adfpl/blob/main/media/ADF_PostPrivateLink.png)
+![Azure Data Factory - network diagram - with private link](media/ADF_PostPrivateLink.png)
 
 What's more - you don’t need to configure the preceding domain and port in a virtual network - which further reduced your risk exposure.
 
 
-I have exported the ARM templates for the above setup to the GitHub link here.  https://github.com/caryeun/adfpl/blob/main/armtemplates/postPrivateLink
+I have exported the ARM templates for the above setup to the GitHub link here.  armtemplates/postPrivateLink
 You should notice that there are 3 additional resources created for the private link to work. 
 ![Resource list - after adding private link](media/postPrivateLink_resourceList.PNG)
 
@@ -79,10 +79,10 @@ You can disable public network access to the data factory.  Below screen capture
 
 ## How to tell if my self-hosted integration runtime is connecting to the private endpoint?
 You can verify by checking the DNS resolution of the service endpoint hostname on the integration runtime.  You can get the hostname from the authentication key string in the Azure Data Factory portal, as shown below.
-![Azure Data Factory - Integration runtime Authentication Key](https://github.com/caryeun/adfpl/blob/main/media/adfPrivateLinkeServiceEndPoint.png)
+![Azure Data Factory - Integration runtime Authentication Key](media/adfPrivateLinkeServiceEndPoint.png)
 
 If private endpoint is setup, then the DNS resolution on your self hosted integration runtime should show an internal IP address. In the example below, it resolves to 192.168.168.5 which is the intranet address assigned by internal DNS. 
-![Azure Data Factory - DNS resolution](https://github.com/caryeun/adfpl/blob/main/media/adfPrivateLinkeServiceEndPoint_resolveToInternalIp.png)
+![Azure Data Factory - DNS resolution](media/adfPrivateLinkeServiceEndPoint_resolveToInternalIp.png)
 
 
 ## I am interested to know more.  Where may I get more info?
